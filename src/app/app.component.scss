@@ -47,5 +47,38 @@
     display: flex;
     width: 100%;
     height: 100%;
+    justify-content: center;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 80%;
+
+      .title-links {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 100%;
+
+        .title {
+          display: flex;
+          width: 100%;
+          height: 100%;
+        }
+
+        .sub-title {
+          display: flex;
+          width: 100%;
+          height: 100%;
+        }
+
+        .links {
+          display: flex;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
   }
 }
