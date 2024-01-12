@@ -23,8 +23,10 @@
     // height: 100%;
 
     .logo {
-      width: 113px;
-      height: 39px;
+      display: flex;
+      flex: 0 1 100%;
+      // width: 113px;
+      // height: 39px;
     }
   }
 
