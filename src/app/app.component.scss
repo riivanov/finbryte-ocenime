@@ -70,7 +70,7 @@
           font-weight: 400;
           color: #fff;
           text-align: center;
-          height: 100%;
+          // height: 100%;
         }
 
         .sub-title {
@@ -81,13 +81,55 @@
           color: #fff;
           justify-content: center;
           width: 100%;
-          height: 100%;
+          // height: 100%;
         }
 
         .links {
           display: flex;
           width: 100%;
-          height: 100%;
+          // height: 100%;
+          flex: 0 0 10%;
+          justify-content: center;
+
+          .links-container {
+            display: flex;
+            justify-content: center;
+            // width: 100%;
+            flex: 0 1 50%;
+
+            .buy {
+              display: flex;
+              flex: 0 0 20%;
+              border: 2px solid #ffffff;
+              // border-radius: 2px;
+              border-right: none;
+            }
+
+            .rent {
+              display: flex;
+              flex: 0 0 20%;
+              border: 2px solid #ffffff;
+              border-right: none;
+              // border-radius: 2px;
+            }
+
+            .appraise {
+              display: flex;
+              flex: 0 0 20%;
+              border: 2px solid #ffffff;
+              // border-radius: 2px;
+            }
+
+            div {
+              color: #ffffff;
+              height: 50px;
+              font-size: 16px;
+              font-family: sofia-sans, sans-serif;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
         }
       }
     }
