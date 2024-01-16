@@ -1,0 +1,145 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  &::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("/assets/hero-image.png");
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+
+    .nav-logo {
+      display: flex;
+      width: 80%;
+
+      .logo {
+        display: flex;
+        flex: 0 1 100%;
+        padding-top: 10px;
+      }
+
+      .menu {
+        background: transparent;
+        border: none;
+        padding-top: 22px;
+
+        .icon {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    flex: 0 1 100%;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 80%;
+
+      .title-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 50%;
+        width: 100%;
+
+        .title {
+          display: flex;
+          font-family: sofia-sans, sans-serif;
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 400;
+          color: #fff;
+          text-align: center;
+        }
+
+        .sub-title {
+          display: flex;
+          text-align: center;
+          font-family: sofia-sans, sans-serif;
+          font-size: 24px;
+          font-weight: 400;
+          color: #fff;
+          justify-content: center;
+          width: 100%;
+        }
+
+        .links {
+          display: flex;
+          width: 100%;
+          padding-top: 45px;
+          flex: 0 0 10%;
+          justify-content: center;
+
+          .links-container {
+            display: flex;
+            justify-content: center;
+            flex: 0 1 50%;
+
+            .buy {
+              display: flex;
+              flex: 0 0 20%;
+              border: 2px solid #ffffff;
+              border-right: none;
+            }
+
+            .rent {
+              display: flex;
+              flex: 0 0 20%;
+              border: 2px solid #ffffff;
+              border-right: none;
+            }
+
+            .appraise {
+              display: flex;
+              flex: 0 0 20%;
+              border: 2px solid #ffffff;
+              cursor: pointer;
+            }
+
+            div {
+              color: #ffffff;
+              height: 50px;
+              font-size: 16px;
+              font-family: sofia-sans, sans-serif;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  .learn-more {
+    display: flex;
+    justify-content: center;
+    flex: 1 0 7%;
+    .arrow {
+      display: flex;
+
+      color: #ffffff;
+      transform: rotate(-90deg);
+    }
+  }
+}
