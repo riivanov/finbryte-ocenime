@@ -1,0 +1,48 @@
+:host {
+  display: flex;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    .address-container {
+      display: flex;
+      flex: 1;
+      .address {
+        display: flex;
+        flex: 1;
+      }
+    }
+
+    .area-property-type {
+      display: flex;
+      .area {
+        display: flex;
+      }
+    }
+
+    .construction-type-construction-year {
+      display: flex;
+      .construction-year {
+        display: flex;
+      }
+    }
+
+    .floors-num-floors {
+      display: flex;
+      .floors {
+        display: flex;
+      }
+      .num-floors {
+        display: flex;
+      }
+    }
+
+    .furnishing-condition {
+      display: flex;
+    }
+
+    mat-form-field {
+      padding-right: 1em;
+    }
+  }
+}

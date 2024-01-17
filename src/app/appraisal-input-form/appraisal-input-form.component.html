@@ -1,0 +1,98 @@
+<form class="form" [formGroup]="form" (ngSubmit)="save(form)">
+  <div class="address-container">
+    <mat-form-field class="address">
+      <mat-label>Адрес</mat-label>
+      <input
+        formControlName="address"
+        placeholder="Въведете точен адрес"
+        matInput
+      />
+      <mat-icon matSuffix>mode_edit</mat-icon>
+    </mat-form-field>
+  </div>
+
+  <div class="area-property-type">
+    <mat-form-field class="area">
+      <mat-label>Area</mat-label>
+      <input formControlName="area" type="number" placeholder="" matInput />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label> Вид имот </mat-label>
+      <mat-select formControlName="propertyType" multiple>
+        @for (type of propertyTypes; track type) {
+        <mat-option [value]="type">{{ type }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="construction-type-construction-year">
+    <!-- Вид строителство -->
+    <mat-form-field>
+      <mat-label>Вид строителство</mat-label>
+      <mat-select formControlName="constructionType" multiple>
+        @for (type of constructionTypes; track type) {
+        <mat-option [value]="type">{{ type }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Година на строеж -->
+    <mat-form-field class="constructionYear">
+      <mat-label>Construction Year</mat-label>
+      <input
+        formControlName="constructionYear"
+        type="number"
+        placeholder="Година на строеж"
+        matInput
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="floors-num-floors">
+    <!-- Етаж -->
+    <mat-form-field class="floors">
+      <mat-label>Floor</mat-label>
+      <input
+        formControlName="floor"
+        type="number"
+        placeholder="Етаж"
+        matInput
+      />
+    </mat-form-field>
+
+    <!-- Етажи на сградата -->
+    <mat-form-field class="num-floors">
+      <mat-label>Number of floors</mat-label>
+      <input
+        formControlName="numFloors"
+        type="number"
+        placeholder="Етажи на сградата"
+        matInput
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="furnishing-condition">
+    <!-- Обзавеждане -->
+    <mat-form-field>
+      <mat-label>Обзавеждане </mat-label>
+      <mat-select formControlName="furnishing" multiple>
+        @for (type of furnishings; track type) {
+        <mat-option [value]="type">{{ type }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Състояние -->
+    <mat-form-field>
+      <mat-label>Състояние</mat-label>
+      <mat-select formControlName="condition" multiple>
+        @for (condition of conditions; track condition) {
+        <mat-option [value]="condition">{{ condition }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </div>
+</form>
