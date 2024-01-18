@@ -3,6 +3,52 @@
   flex: 1 0 100%;
   flex-direction: column;
 
+  .nav {
+    display: flex;
+    justify-content: center;
+
+    .nav-logo {
+      display: flex;
+      width: 80%;
+
+      .logo {
+        display: flex;
+        flex: 0 1 100%;
+        padding-top: 10px;
+      }
+
+      .menu {
+        background: transparent;
+        border: none;
+        padding-top: 22px;
+
+        .icon {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font: normal normal bold 48px/60px "sofia-sans";
+    letter-spacing: 0px;
+    color: #ffffff;
+
+    .top {
+      display: flex;
+      text-align: center;
+    }
+
+    .bottom {
+      display: flex;
+      text-align: center;
+      font: normal normal 800 24px/30px "sofia-sans";
+    }
+  }
+
   .links {
     display: flex;
     width: 100%;
