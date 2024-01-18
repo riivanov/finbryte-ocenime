@@ -1,11 +1,35 @@
+<!-- <div class="wrapper"> -->
 <div class="form-map">
-  <div class="form-container">
-    <app-appraisal-input-form class="form"></app-appraisal-input-form>
-  </div>
-  <div class="map-container">
-    <div id="map"></div>
+  <div class="wrapper">
+    <div class="form-container">
+      <app-appraisal-input-form class="form"></app-appraisal-input-form>
+
+      <!-- Could be a component -->
+      <div class="direction">
+        <h5>Изложение</h5>
+        <div class="checkboxes">
+          <mat-checkbox color="primary" formControlName="north"
+            >Север</mat-checkbox
+          >
+          <mat-checkbox color="primary" formControlName="south"
+            >Юг</mat-checkbox
+          >
+          <mat-checkbox color="primary" formControlName="east"
+            >Изток</mat-checkbox
+          >
+          <mat-checkbox color="primary" formControlName="west"
+            >Запад</mat-checkbox
+          >
+        </div>
+      </div>
+      <button mat-flat-button color="primary">Primary</button>
+    </div>
+    <div class="map-container">
+      <div id="map"></div>
+    </div>
   </div>
 </div>
+<!-- </div> -->
 <div class="learn-more">
   <mat-icon class="arrow">arrow_back_ios</mat-icon>
 </div>
