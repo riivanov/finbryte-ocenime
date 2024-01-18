@@ -3,6 +3,55 @@
   flex: 1 0 100%;
   flex-direction: column;
 
+  .links {
+    display: flex;
+    width: 100%;
+    padding-top: 45px;
+    flex: 0 0 10%;
+    justify-content: center;
+
+    .links-container {
+      display: flex;
+      justify-content: center;
+      flex: 0 1 50%;
+
+      .buy {
+        display: flex;
+        flex: 0 0 20%;
+        border: 2px solid #ffffff;
+        border-right: none;
+      }
+
+      .rent {
+        display: flex;
+        flex: 0 0 20%;
+        border: 2px solid #ffffff;
+        border-right: none;
+      }
+
+      .appraise {
+        display: flex;
+        flex: 0 0 20%;
+        border: 2px solid #ffffff;
+        cursor: pointer;
+
+        &.active {
+          background-color: #06efce;
+        }
+      }
+
+      div {
+        color: #ffffff;
+        height: 50px;
+        font-size: 16px;
+        font-family: sofia-sans, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
   &::before {
     content: "";
     position: fixed;

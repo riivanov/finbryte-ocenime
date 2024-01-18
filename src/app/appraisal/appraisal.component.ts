@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { AppraisalInputFormComponent } from '../appraisal-input-form/appraisal-input-form.component';
 
 @Component({
   selector: 'app-appraisal',
   standalone: true,
   imports: [
+    RouterModule,
     MatIconModule,
     AppraisalInputFormComponent,
     MatCheckboxModule,
@@ -17,6 +19,10 @@ import { AppraisalInputFormComponent } from '../appraisal-input-form/appraisal-i
   styleUrl: './appraisal.component.scss',
 })
 export class AppraisalComponent {
+  active = false;
+
+  constructor(private activatedRoute: ActivatedRoute) {}
+
   ngOnInit() {
     // @ts-ignore
     let map: google.maps.Map;
@@ -34,5 +40,7 @@ export class AppraisalComponent {
     }
 
     initMap();
+
+    this.active = this.activatedRoute.snapshot.url.at(0)?.path === 'appraise';
   }
 }
