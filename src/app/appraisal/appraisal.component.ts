@@ -9,4 +9,23 @@ import { AppraisalInputFormComponent } from '../appraisal-input-form/appraisal-i
   templateUrl: './appraisal.component.html',
   styleUrl: './appraisal.component.scss',
 })
-export class AppraisalComponent {}
+export class AppraisalComponent {
+  ngOnInit() {
+    // @ts-ignore
+    let map: google.maps.Map;
+    async function initMap(): Promise<void> {
+      // @ts-ignore
+      const { Map } = (await google.maps.importLibrary(
+        'maps'
+        // @ts-ignore
+      )) as google.maps.MapsLibrary;
+
+      map = new Map(document.getElementById('map') as HTMLElement, {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8,
+      });
+    }
+
+    initMap();
+  }
+}
