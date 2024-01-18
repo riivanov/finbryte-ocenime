@@ -15,8 +15,8 @@ npm --version # 10.2.4
 ```
 
 ```bash
-git clone https://github.com/riivanov/armageddon.git
-cd armageddon
+git clone https://github.com/riivanov/finbryte-ocenime.git
+cd finbryte-ocenime
 npm install
 npm start
 ```
