@@ -95,4 +95,24 @@
       </mat-select>
     </mat-form-field>
   </div>
+
+  <!-- Could be a component -->
+  <div class="direction">
+    <h5>Изложение</h5>
+    <div class="checkboxes">
+      <label>Север</label>
+      <input type="checkbox" formControlName="north" />
+      <label>Изток</label>
+      <input type="checkbox" formControlName="east" />
+      <label>Юг</label>
+      <input type="checkbox" formControlName="south" />
+      <label>Запад</label>
+      <input type="checkbox" formControlName="west" />
+    </div>
+  </div>
+
+  <!-- Should use a seperate directive here for hover effect -->
+  <button class="submit-button" mat-flat-button color="primary">
+    ПРОДЪЛЖИ
+  </button>
 </form>

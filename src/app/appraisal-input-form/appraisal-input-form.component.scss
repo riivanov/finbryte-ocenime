@@ -1,9 +1,11 @@
 :host {
   display: flex;
+  flex-direction: column;
 
   .form {
     display: flex;
     flex-direction: column;
+
     .address-container {
       display: flex;
       flex: 1;
@@ -41,8 +43,17 @@
       display: flex;
     }
 
-    mat-form-field {
+    input {
       padding-right: 1em;
     }
+
+    .direction {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .submit-button:hover {
+    background-color: #06efce;
   }
 }
