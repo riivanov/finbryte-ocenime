@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-appraisal-input-form',
@@ -39,7 +40,7 @@ export class AppraisalInputFormComponent {
     'На зелено',
   ];
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private router: Router) {}
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -59,5 +60,9 @@ export class AppraisalInputFormComponent {
     });
   }
 
-  save(form: FormGroup) {}
+  save(form: FormGroup) {
+    if (form.valid) {
+      this.router.navigate(['result']);
+    }
+  }
 }

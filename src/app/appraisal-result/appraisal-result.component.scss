@@ -1,0 +1,35 @@
+:host {
+  .nav {
+    display: flex;
+    justify-content: center;
+
+    .nav-logo {
+      display: flex;
+      width: 80%;
+
+      .logo {
+        display: flex;
+        flex: 0 1 100%;
+        padding-top: 10px;
+
+        .svg {
+          .g {
+            .path {
+              fill: url(#gradient);
+            }
+          }
+        }
+      }
+
+      .menu {
+        background: transparent;
+        border: none;
+        padding-top: 22px;
+
+        .icon {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
