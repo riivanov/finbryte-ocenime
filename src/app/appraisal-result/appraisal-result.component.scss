@@ -27,8 +27,28 @@
         padding-top: 22px;
 
         .icon {
-          color: #ffffff;
+          color: #0070d0;
         }
+      }
+    }
+  }
+
+  .share {
+    display: flex;
+
+    i {
+      color: #0070d0;
+    }
+
+    .text {
+      text-align: left;
+      font: normal normal normal 14px/20px "sofia-sans";
+      letter-spacing: 0px;
+      color: #0070d0;
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
       }
     }
   }

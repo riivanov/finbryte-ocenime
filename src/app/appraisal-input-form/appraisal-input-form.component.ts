@@ -61,8 +61,9 @@ export class AppraisalInputFormComponent {
   }
 
   save(form: FormGroup) {
-    if (form.valid) {
-      this.router.navigate(['result']);
-    }
+    // Would connect if 3rd page was done
+    // if (form.valid) {
+    //   this.router.navigate(['result']);
+    // }
   }
 }
