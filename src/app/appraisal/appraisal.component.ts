@@ -4,6 +4,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { AppraisalInputFormComponent } from '../appraisal-input-form/appraisal-input-form.component';
+import { MockApiService } from '../mock-api.service';
 
 @Component({
   selector: 'app-appraisal',
@@ -21,7 +22,12 @@ import { AppraisalInputFormComponent } from '../appraisal-input-form/appraisal-i
 export class AppraisalComponent {
   active = false;
 
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private api: MockApiService
+  ) {
+    console.log(this.api.getData().suggestions);
+  }
 
   ngOnInit() {
     // @ts-ignore
